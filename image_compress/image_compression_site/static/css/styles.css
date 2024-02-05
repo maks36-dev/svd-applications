@@ -1,0 +1,185 @@
+/* Обнуляем отступы и поля для тегов body и header */
+body, header {
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для header */
+header {
+    background-color: #282828;
+    color: white;
+    text-align: center;
+    padding: 1vw;
+}
+
+body{
+    background-color: #fff;
+    height: inherit;
+}
+/* Стили для заголовка и текста в header */
+h1 {
+    font-size: 4vh;
+}
+
+.wrapper {
+	display: flex;
+    width: inherit;
+	flex-direction: column;
+    background-image: url('../images/forest.jpeg'); /* Укажите путь к изображению */
+    background-size: cover; /* Растягивает изображение на весь фон */
+    background-position: center center; /* Позиция изображения по центру */
+    background-repeat: no-repeat; /* Запрет повторения изображения */
+    background-color: #f0f0f0; 
+}
+
+/* Стили для контейнера с видео и текстом */
+.content {
+    margin: 0 10vw;
+    padding-top: 2vh;
+    flex: 1 0 auto;
+    min-height: 90vh;
+    min-width: 80vh;
+}
+
+/* Стили для контейнера с изображениями и текстом */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Стили для кнопки */
+.action-button {
+    margin-top: 2%;
+    background-color: #4798ee; /* Цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    font-size: 16px; /* Размер шрифта */
+    border: none; /* Убираем границу */
+    border-radius: 25px; /* Радиус скругления углов */
+    cursor: pointer; /* Изменяем указатель при наведении */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
+}
+
+.action-button:hover {
+    background-color: #0070cc; /*Цвет фона при наведении */
+}
+
+
+/* Стили для области с изображением и Dropzone */
+.dropzone{
+    width: 100%;
+    height: auto;
+    background: inherit;
+    border: 1px dashed #020000;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.image-preview {
+    width: calc(50% - 10px);
+    padding: 3vw;
+    border: 1px dashed #100606;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    background-color:  rgb(161, 216, 248); /* RGB значения для темно-бюрозового цвета */
+
+}
+
+.dropzone:hover {
+    border-color: rgb(161, 216, 248);
+}
+
+.file-input {
+    display: none;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    color: white;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+
+/* Description */
+.description {
+    margin-top: 4%;
+    background-color: #94bcec;
+    padding: 3%;
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 3vw;
+}
+
+/* Footer */
+footer {
+    background-color: #282828;
+    color: white;
+    text-align: center;
+    /* padding: 2% 0%; Добавьте верхний и нижний внутренний отступ */
+    flex: 0 0 auto;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Добавьте тень снизу */
+}
+
+
+/* Table of size and name */
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1vw; 
+    text-align: left; 
+}
+
+/*Loader*/
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Slider */
+.slider-container {
+    display: flex;
+    padding-top: 3vh;
+    align-items:end;
+}
+  
+.slider-label {
+    color: #4798ee;
+}
+
+.current-value {
+    font-weight: bold;
+    color: #4798ee;
+    font-size: 1.5vw;
+}
+
+.slider-text {
+    color: #4798ee;
+    font-size: 1.5vw;
+    padding-right: 1vw;
+}
+  
