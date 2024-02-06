@@ -1,6 +1,6 @@
 dropzone.addEventListener('drop', (e) => {
     e.preventDefault();
-
+    console.log("!")
     const file = e.dataTransfer.files[0];
 
     if (file && file.type.startsWith('image/')) {
@@ -17,7 +17,7 @@ dropzone.addEventListener('click', () => {
     input.type = 'file';
     input.accept = 'image/*';
     input.style.display = 'none';
-
+    console.log("!!")
     input.addEventListener('change', (e) => {
         const file = e.target.files[0];
 

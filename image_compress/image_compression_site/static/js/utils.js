@@ -18,6 +18,7 @@ function createTable() {
 }
 
 async function fetchData(formData) {
+    console.log("2")
     try {
     const response = await fetch("/upload", {
                                     method: 'POST',
@@ -34,6 +35,7 @@ async function fetchData(formData) {
 }
 
 async function upload_image(file){
+    console.log("1")
     const reader = new FileReader();
 
     const formData = new FormData();
@@ -56,4 +58,5 @@ async function upload_image(file){
     document.getElementById("img_name").innerHTML = file.name;
 
     reader.readAsDataURL(file);
+    console.log("3")
 }

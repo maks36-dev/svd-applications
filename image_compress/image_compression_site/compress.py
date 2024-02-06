@@ -24,14 +24,6 @@ def get_image_data(name, path="", gray = False):
             return np.asarray(img_r), np.asarray(img_g), np.asarray(img_b)
     raise FileNotFoundError("No such file")
 
-
-# def compress_img(path, procent_of_compress):
-#     img_r, img_g, img_b = get_image_data(path)
-#     img = SVD_Image(False, img_r, img_g, img_b)
-#     img.leave_single_vals(procent_of_compress)
-#     img.save_decompose(path)
-
-
 def save_img(path):
     img = SVD_Image()
     img.load_decompose()
