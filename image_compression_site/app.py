@@ -4,7 +4,7 @@ from compress import compress_img, split_file_name
 
 
 app = Flask(__name__)
-UPLOAD_FOLDER = '/home/python/courseWork/image_compress/image_compression_site/static/upload_images'
+UPLOAD_FOLDER = '/home/python/courseWork/image_compression_site/static/upload_images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
