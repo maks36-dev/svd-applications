@@ -3,6 +3,7 @@ const dropzone = document.getElementById('dropzone');
 const slider = document.getElementById("slider");
 const currentValue = document.querySelector(".current-value"); 
 
+// updating slider value
 slider.addEventListener("input", function() {
     const sliderValue = slider.value;
     currentValue.textContent = sliderValue + "%";

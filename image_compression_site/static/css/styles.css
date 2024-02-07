@@ -1,10 +1,10 @@
-/* Обнуляем отступы и поля для тегов body и header */
+/* reset the margins and margins for the body and header tags */
 body, header {
     margin: 0;
     padding: 0;
 }
 
-/* Стили для header */
+
 header {
     background-color: #282828;
     color: white;
@@ -12,27 +12,36 @@ header {
     padding: 1vw;
 }
 
+
 body{
     background-color: #fff;
     height: inherit;
 }
-/* Стили для заголовка и текста в header */
+
+
 h1 {
     font-size: 4vh;
 }
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 3vw;
+}
+
 
 .wrapper {
 	display: flex;
     width: inherit;
 	flex-direction: column;
-    background-image: url('../images/forest.jpeg'); /* Укажите путь к изображению */
-    background-size: cover; /* Растягивает изображение на весь фон */
-    background-position: center center; /* Позиция изображения по центру */
-    background-repeat: no-repeat; /* Запрет повторения изображения */
+    background-image: url('../images/forest.jpeg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
     background-color: #f0f0f0; 
 }
 
-/* Стили для контейнера с видео и текстом */
+/* styles for the video and text container */
 .content {
     margin: 0 10vw;
     padding-top: 2vh;
@@ -41,32 +50,32 @@ h1 {
     min-width: 80vh;
 }
 
-/* Стили для контейнера с изображениями и текстом */
+/* styles for the container with images and text */
 .image-container {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-/* Стили для кнопки */
+
 .action-button {
     margin-top: 2%;
-    background-color: #4798ee; /* Цвет фона */
-    color: white; /* Белый цвет текста */
-    padding: 10px 20px; /* Внутренние отступы кнопки */
-    font-size: 16px; /* Размер шрифта */
-    border: none; /* Убираем границу */
-    border-radius: 25px; /* Радиус скругления углов */
-    cursor: pointer; /* Изменяем указатель при наведении */
-    transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
+    background-color: #4798ee;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px; 
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
 }
+
 
 .action-button:hover {
-    background-color: #0070cc; /*Цвет фона при наведении */
+    background-color: #0070cc;
 }
 
 
-/* Стили для области с изображением и Dropzone */
 .dropzone{
     width: 100%;
     height: auto;
@@ -77,6 +86,7 @@ h1 {
     transition: border-color 0.3s;
 }
 
+
 .image-preview {
     width: calc(50% - 10px);
     padding: 3vw;
@@ -84,22 +94,26 @@ h1 {
     text-align: center;
     cursor: pointer;
     transition: border-color 0.3s;
-    background-color:  rgb(161, 216, 248); /* RGB значения для темно-бюрозового цвета */
+    background-color:  rgb(161, 216, 248);
 
 }
+
 
 .dropzone:hover {
     border-color: rgb(161, 216, 248);
 }
 
+
 .file-input {
     display: none;
 }
+
 
 .image-preview img {
     max-width: 100%;
     height: auto;
 }
+
 
 .caption {
     color: white;
@@ -108,7 +122,6 @@ h1 {
 }
 
 
-/* Description */
 .description {
     margin-top: 4%;
     background-color: #94bcec;
@@ -118,21 +131,14 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 3vw;
-}
-
 /* Footer */
 footer {
     background-color: #282828;
     color: white;
     text-align: center;
-    /* padding: 2% 0%; Добавьте верхний и нижний внутренний отступ */
     flex: 0 0 auto;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Добавьте тень снизу */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Table of size and name */
 table {
@@ -144,7 +150,7 @@ th, td {
     text-align: left; 
 }
 
-/*Loader*/
+
 .loader {
     border: 4px solid rgba(255, 255, 255, 0.3);
     border-top: 4px solid #3498db;
@@ -160,7 +166,7 @@ th, td {
     100% { transform: rotate(360deg); }
 }
 
-/* Slider */
+
 .slider-container {
     display: flex;
     padding-top: 3vh;

@@ -2,6 +2,7 @@ import os
 import numpy as np
 from PIL import Image
 
+
 def split_file_name(file_path):
     file_name = os.path.basename(file_path)
     file_name_without_extension, file_extension = os.path.splitext(file_name)

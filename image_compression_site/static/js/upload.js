@@ -1,11 +1,11 @@
+// Processing a move to select a file through a dialog box
 dropzone.addEventListener('drop', (e) => {
+    // get image
     e.preventDefault();
-    console.log("!")
     const file = e.dataTransfer.files[0];
 
     if (file && file.type.startsWith('image/')) {
         upload_image(file);
-        
     } else {
         alert('Please select an image.');
     }
@@ -17,7 +17,7 @@ dropzone.addEventListener('click', () => {
     input.type = 'file';
     input.accept = 'image/*';
     input.style.display = 'none';
-    console.log("!!")
+
     input.addEventListener('change', (e) => {
         const file = e.target.files[0];
 

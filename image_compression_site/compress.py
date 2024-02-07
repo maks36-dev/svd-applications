@@ -33,8 +33,3 @@ def compress_img(file_path, percent_of_compression):
     file_name = Path(file_path).name
     file_name = file_name[:-(file_name[::-1].find(".")+1)]
     img_denoised.save(f'static/compress_images/{file_name}_{percent_of_compression}.jpg')
-    
-
-if __name__ == "__main__":
-    compress_img("static/upload_images/CloneWars.jpg", 5)
-    

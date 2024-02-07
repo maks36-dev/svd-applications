@@ -1,25 +1,26 @@
-
-
 document.getElementById("compress_btn").addEventListener("click", function() {
+    img_size = document.getElementById("img_size_2");
+
     // Disabling the button
     const button = document.getElementById("compress_btn");
     button.disabled = true;
 
-    img_size = document.getElementById("img_size_2");
-    const a = document.createElement("a");
-    a.id = "download_img";
-
+    // link to show img
     const compress_img = document.createElement("img");
     compress_img.id = "compress_img";
     compress_img.alt = "Ваше изображение";
 
+    // rotating animation
     const loader = document.createElement("div")
     loader.className = "loader";
     loader.id = "loader";
     
-
+    // link to download img
+    const a = document.createElement("a");
+    a.id = "download_img";
     a.appendChild(compress_img);
 
+    // data about name and percent of compress 
     const data = {
         name: (document.getElementById("img_name").innerHTML).toString(),
         perc_of_comp: document.getElementById("slider").value
@@ -36,8 +37,9 @@ document.getElementById("compress_btn").addEventListener("click", function() {
     if (document.getElementById("img_to_compress") == null){
         alert('Please select an image.');
     }else{
-        document.getElementById("image-preview").appendChild(loader);
-        fetch('/compress', options)
+        document.getElementById("image-preview").appendChild(loader); // add loader
+
+        fetch('/compress', options) // POST request for compressed image
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -46,24 +48,22 @@ document.getElementById("compress_btn").addEventListener("click", function() {
             }
         })
         .then(dict => {
-            // Add Image
+            // add Image
             document.getElementById("image-preview").removeChild(loader);
             document.getElementById("image-preview").appendChild(a);
-            createTable();
-
-
             const img = document.getElementById("compress_img");
             img.src = dict["path"];
 
+            // add table inform
+            createTable();
             document.getElementById("img_size_2").innerHTML = dict["file_size"] + " Mb"
 
-            // Add download options
+            // add download options
             download_image = document.getElementById("download_img");
-            download_image.href = dict["path"];;
+            download_image.href = dict["path"];
             download_image.download = "Compress Image.jpg";
         })
         .catch(error => {
-            console.error(error);
             alert('An error occurred while downloading the image');
         });
     }
