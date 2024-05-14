@@ -4,7 +4,6 @@
 This repository is dedicated to projects utilizing Singular Value Decomposition (SVD). Our collection showcases the diverse applications of SVD, highlighting its versatility and effectiveness. Explore projects spanning data analysis, recommendation systems, image compression, and much more.
 
 ## Projects
-- [Machine Learning](liniar_regression)
 - [Image Compression](image_compress)
 - [Kabsch algorithm](kabsch_algorithm)
 

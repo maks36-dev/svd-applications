@@ -16,21 +16,21 @@ def plot_graph(pl, graph, points):
     pl.plot()
 
 def kabsch_algorithm(molecule_a, molecule_b):
-    # Вычисление центра масс каждой молекулы
+    # Calculating the center of mass of each molecule
     center_of_mass_a = np.mean(molecule_a, axis=0)
     center_of_mass_b = np.mean(molecule_b, axis=0)
 
-    # Вычитание центра масс
+    # Subtracting the center of mass
     centered_molecule_a = molecule_a - center_of_mass_a
     centered_molecule_b = molecule_b - center_of_mass_b
 
-    # Вычисление матрицы ковариации
+    # Calculating the covariance matrix
     covariance_matrix = np.dot(centered_molecule_a.T, centered_molecule_b)
 
-    # SVD разложение матрицы ковариации
+    # SVD decomposition of the covariance matrix
     U, S, Vt = np.linalg.svd(covariance_matrix)
 
-    # Определение оптимальной ориентации молекулы A относительно молекулы B
+    # Determining the optimal orientation of molecule A relative to molecule B
     rotation_matrix = np.dot(U, Vt)
 
     aligned_molecule_a = np.dot(centered_molecule_a, rotation_matrix) + center_of_mass_b
@@ -50,15 +50,15 @@ def main():
     ])
 
     H = kabsch_algorithm(A, B)
-    plt.plot(A[:, 0], A[:, 1], linewidth=2, c='b', label="1-ая молекула")
-    plt.plot(B[:, 0], B[:, 1], linewidth=2, c='r', label="2-ая молекула")
-    plt.plot(H[:, 0], H[:, 1], linewidth=2, linestyle=':', marker='o', c='g', label="Результат вращения")
+    plt.plot(A[:, 0], A[:, 1], linewidth=2, c='b', label="1st molecule")
+    plt.plot(B[:, 0], B[:, 1], linewidth=2, c='r', label="2nd molecule")
+    plt.plot(H[:, 0], H[:, 1], linewidth=2, linestyle=':', marker='o', c='g', label="Rotation result")
 
     plt.legend()
 
-    plt.xlabel('X-ось')
-    plt.ylabel('Y-ось')
-    plt.title('Алгоритм Кабша')
+    plt.xlabel('X-axis')
+    plt.ylabel('Y-axis')
+    plt.title('Kabsha algorithm')
     plt.savefig("kabsch.jpg")
 
 
